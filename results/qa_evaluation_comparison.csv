@@ -1,0 +1,8 @@
+Metric,Original Model,Pruned Model
+Overall Accuracy,25.00%,35.00%
+Avg Log-Likelihood,-2.7937,-3.2579
+Factual Accuracy,10.00%,10.00%
+Multiple Choice Accuracy,40.00%,60.00%
+Easy Accuracy,40.00%,60.00%
+Medium Accuracy,0.00%,14.29%
+Hard Accuracy,33.33%,0.00%

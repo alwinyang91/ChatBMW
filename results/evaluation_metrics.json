@@ -1,0 +1,60 @@
+{
+  "summarization": {
+    "rouge1_precision": 0.5877321433415812,
+    "rouge1_recall": 0.5881411287719833,
+    "rouge1_fmeasure": 0.5557273797399531,
+    "rouge2_precision": 0.4584464369692757,
+    "rouge2_recall": 0.4750157344625329,
+    "rouge2_fmeasure": 0.4463106617167334,
+    "rougeL_precision": 0.5232526603766758,
+    "rougeL_recall": 0.5325584458083638,
+    "rougeL_fmeasure": 0.5005028284958716,
+    "avg_pred_length": 43.89340101522843,
+    "avg_ref_length": 44.59390862944162,
+    "avg_length_ratio": 1.1993736648124858,
+    "std_length_ratio": 1.0267840472452734,
+    "bertscore_precision": 0.9136574268341064,
+    "bertscore_recall": 0.912442684173584,
+    "bertscore_f1": 0.9126743078231812
+  },
+  "title_generation": {
+    "rouge1_precision": 0.6777276516367365,
+    "rouge1_recall": 0.6147687201949018,
+    "rouge1_fmeasure": 0.6252598936316521,
+    "rouge2_precision": 0.5230955116946038,
+    "rouge2_recall": 0.4785127417160517,
+    "rouge2_fmeasure": 0.48559150259413836,
+    "rougeL_precision": 0.6074294030047571,
+    "rougeL_recall": 0.5549750137229569,
+    "rougeL_fmeasure": 0.5628018102558966,
+    "avg_pred_length": 10.626373626373626,
+    "avg_ref_length": 12.175824175824175,
+    "avg_length_ratio": 0.9943031098977015,
+    "std_length_ratio": 0.55744408316241,
+    "bertscore_precision": 0.9322323203086853,
+    "bertscore_recall": 0.9247674345970154,
+    "bertscore_f1": 0.9282543063163757
+  },
+  "tag_extraction": {
+    "exact_match_accuracy": 0.3448275862068966,
+    "jaccard_similarity": 0.5583805548181816,
+    "precision": 0.6568239869964008,
+    "recall": 0.6603346685243237,
+    "f1": 0.6307467546348492
+  },
+  "type_classification": {
+    "accuracy": 0.8811188811188811,
+    "correct": 126,
+    "total": 143,
+    "class_distribution": {
+      "press release": 135,
+      "press kit": 6,
+      "speech": 2
+    },
+    "class_accuracy": {
+      "press release": 0.8888888888888888,
+      "press kit": 0.6666666666666666,
+      "speech": 1.0
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.venv/
+*.egg-info
+__pycache__/
+wandb/
+checkpoints/
+unsloth_compiled_cache/
+.env

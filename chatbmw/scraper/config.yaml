@@ -1,0 +1,38 @@
+# BMW PressClub Scraper Configuration
+
+scraper:
+  # Delay between requests in seconds
+  delay: 1.5
+  
+  # HTTP request timeout in seconds
+  timeout: 30.0
+  
+  # Maximum retry attempts
+  max_retries: 3
+  
+  # Browser user agent string
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  
+  # Whether to fetch full article content (slower but more complete)
+  fetch_details: True
+  
+  # Maximum number of articles to scrape (null/empty for no limit)
+  limit: 10
+
+# Output settings
+output:
+  # Default output directory
+  directory: "datasets/raw_data"
+  
+  # Subdirectory for article files (empty string for none)
+  subdirectory: ""
+  
+  # Default output format (json, jsonl, raw_jsonl)
+  format:
+  - "json"
+  - "jsonl"
+
+# URLs
+urls:
+  base: "https://www.press.bmwgroup.com"
+  article_listing: "https://www.press.bmwgroup.com/global/article"

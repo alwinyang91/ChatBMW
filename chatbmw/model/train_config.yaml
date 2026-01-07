@@ -1,0 +1,97 @@
+# Training Configuration for Fine-tuning
+
+# Model settings
+model:
+  name: "unsloth/Llama-3.2-1B-Instruct"
+  max_seq_length: 4096
+  load_in_4bit: false
+  load_in_8bit: false
+  full_finetuning: false
+  dtype: null  # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
+  # token: null  # use one if using gated models like meta-llama/Llama-2-7b-hf
+
+# Paths
+paths:
+  checkpoint_dir: "checkpoints/{model_name}"  # Relative to ChatBMW project root, formatted with model name
+  lora_model_path: "{checkpoint_dir}/lora_model"
+  merged_model_path: "{checkpoint_dir}/merged_model"
+
+# Dataset paths
+data:
+  train_file: "datasets/chat_data_2000/train_chat.jsonl"
+  val_file: "datasets/chat_data_2000/val_chat.jsonl"
+  test_file: "datasets/chat_data_2000/test_chat.jsonl"
+  formatting_batch_size: 100
+
+# LoRA configuration
+lora:
+  r: 32  # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  lora_alpha: 16
+  lora_dropout: 0  # Supports any, but = 0 is optimized
+  bias: "none"  # Supports any, but = "none" is optimized
+  use_gradient_checkpointing: "unsloth"  # True or "unsloth" for very long context
+  random_state: 3407
+  use_rslora: false  # We support rank stabilized LoRA
+  loftq_config: null  # And LoftQ
+
+# Chat template
+chat_template:
+  name: "llama-3.2"  # Use conversational format for Instruct models
+
+# Training configuration (SFTConfig)
+training:
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 4
+  eval_strategy: "steps"
+  eval_steps: 50  # Evaluate less frequently due to more samples
+  gradient_accumulation_steps: 1
+  warmup_steps: 10
+  num_train_epochs: 20
+  learning_rate: 2.0e-4
+  logging_steps: 10
+  optim: "adamw_8bit"
+  weight_decay: 0.001
+  lr_scheduler_type: "linear"
+  seed: 3407
+  report_to: "tensorboard"  # Default: tensorboard. If wandb api_key exists, both will be used
+  save_strategy: "steps"
+  save_steps: 50
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+  packing: false  # Can make training 5x faster for short sequences
+
+# Early stopping
+early_stopping:
+  patience: 10  # How many steps we will wait if the eval loss doesn't decrease
+  threshold: 0.0  # Can set higher - sets how much loss should decrease by until we consider early stopping
+
+# Response-only training
+response_training:
+  instruction_part: "<|start_header_id|>user<|end_header_id|>\n\n"
+  response_part: "<|start_header_id|>assistant<|end_header_id|>\n\n"
+
+# Wandb configuration
+wandb:
+  api_key: null  # Load from .env file (WANDB_API_KEY)
+  project: "BMW-Llama-3.2-1B"  
+  entity: null  # null means use default account
+  run_name: "BMW-Llama-3.2-1B-2000Articles"
+  config:
+    model: "Llama-3.2-1B"
+    task: "BMW News Fine-tuning"
+    method: "LoRA"
+
+# Model saving
+save:
+  merged_save_method: "merged_16bit"  # Options: "merged_16bit", "merged_4bit", "lora"
+

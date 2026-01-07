@@ -1,0 +1,174 @@
+{
+  "description": "BMW News Simple Factual Q&A - Testing basic fact retention from training",
+  "version": "7.0",
+  "created_date": "2026-01-05",
+  "note": "Balanced answer distribution (A/B/C/D each ~25%). Simple factual questions to test if models learned basic facts from training data.",
+  "total_questions": 20,
+  "answer_distribution": "A=3, B=3, C=2, D=2 for MC; balanced factual",
+  "categories": {
+    "factual": "Simple factual questions with short answers",
+    "multiple_choice": "Questions with 4 options"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "category": "multiple_choice",
+      "question": "What is the name of the BMW M safety car for MotoGP in 2023?",
+      "options": ["BMW M2", "BMW M3", "BMW M4", "BMW M5"],
+      "answer": "BMW M2",
+      "answer_index": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "category": "multiple_choice",
+      "question": "Which racing series does Marco Wittmann compete in?",
+      "options": ["Formula 1", "WRC", "NASCAR", "DTM"],
+      "answer": "DTM",
+      "answer_index": 3,
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "category": "multiple_choice",
+      "question": "Which BMW plant produces the BMW X2?",
+      "options": ["Munich", "Leipzig", "Regensburg", "Berlin"],
+      "answer": "Regensburg",
+      "answer_index": 2,
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "category": "multiple_choice",
+      "question": "Who created the first BMW Art Car?",
+      "options": ["Alexander Calder", "Jeff Koons", "Andy Warhol", "Roy Lichtenstein"],
+      "answer": "Alexander Calder",
+      "answer_index": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 5,
+      "category": "multiple_choice",
+      "question": "Which team does Sheldon van der Linde drive for in DTM?",
+      "options": ["Walkenhorst Motorsport", "Schubert Motorsport", "ROWE Racing", "Team RMG"],
+      "answer": "Schubert Motorsport",
+      "answer_index": 1,
+      "difficulty": "easy"
+    },
+    {
+      "id": 6,
+      "category": "multiple_choice",
+      "question": "What year did BMW M's partnership with MotoGP begin?",
+      "options": ["1995", "2003", "2010", "1999"],
+      "answer": "1999",
+      "answer_index": 3,
+      "difficulty": "easy"
+    },
+    {
+      "id": 7,
+      "category": "multiple_choice",
+      "question": "What type of engine does the BMW M2 have?",
+      "options": ["V8", "Inline 6-cylinder", "V6", "Inline 4-cylinder"],
+      "answer": "Inline 6-cylinder",
+      "answer_index": 1,
+      "difficulty": "easy"
+    },
+    {
+      "id": 8,
+      "category": "multiple_choice",
+      "question": "Which circuit hosted the DTM season opener in Portugal?",
+      "options": ["Estoril", "Algarve", "Portimão", "Braga"],
+      "answer": "Portimão",
+      "answer_index": 2,
+      "difficulty": "easy"
+    },
+    {
+      "id": 9,
+      "category": "multiple_choice",
+      "question": "Which BMW GT3 car competes in DTM?",
+      "options": ["BMW M4 GT3", "BMW M3 GT3", "BMW M6 GT3", "BMW M8 GT3"],
+      "answer": "BMW M4 GT3",
+      "answer_index": 0,
+      "difficulty": "easy"
+    },
+    {
+      "id": 10,
+      "category": "multiple_choice",
+      "question": "Which team does Marco Wittmann drive for?",
+      "options": ["Schubert Motorsport", "ROWE Racing", "Team RBM", "Walkenhorst Motorsport"],
+      "answer": "Walkenhorst Motorsport",
+      "answer_index": 3,
+      "difficulty": "easy"
+    },
+    {
+      "id": 11,
+      "category": "factual",
+      "question": "What is the horsepower of the BMW M2?",
+      "answer": "460",
+      "difficulty": "medium"
+    },
+    {
+      "id": 12,
+      "category": "factual",
+      "question": "How many years has BMW M been Official Car of MotoGP as of 2023?",
+      "answer": "25",
+      "difficulty": "medium"
+    },
+    {
+      "id": 13,
+      "category": "factual",
+      "question": "What is the name of the BMW motorsport team that Marco Wittmann races for?",
+      "answer": "Walkenhorst",
+      "difficulty": "medium"
+    },
+    {
+      "id": 14,
+      "category": "factual",
+      "question": "Which German city has a BMW plant that produces the X1 and X2?",
+      "answer": "Regensburg",
+      "difficulty": "medium"
+    },
+    {
+      "id": 15,
+      "category": "factual",
+      "question": "What racing series does the BMW M4 GT3 compete in?",
+      "answer": "DTM",
+      "difficulty": "medium"
+    },
+    {
+      "id": 16,
+      "category": "factual",
+      "question": "What is the name of the South African DTM driver for Schubert Motorsport?",
+      "answer": "Sheldon van der Linde",
+      "difficulty": "medium"
+    },
+    {
+      "id": 17,
+      "category": "factual",
+      "question": "Which American artist designed the first BMW Art Car in 1975?",
+      "answer": "Alexander Calder",
+      "difficulty": "medium"
+    },
+    {
+      "id": 18,
+      "category": "factual",
+      "question": "What race did the first BMW Art Car compete in?",
+      "answer": "24 Hours of Le Mans",
+      "difficulty": "hard"
+    },
+    {
+      "id": 19,
+      "category": "factual",
+      "question": "What is the name of BMW's crowd innovation challenge for Metaverse?",
+      "answer": "Supplierthon",
+      "difficulty": "hard"
+    },
+    {
+      "id": 20,
+      "category": "factual",
+      "question": "Which BMW model was the basis for Alexander Calder's Art Car?",
+      "answer": "3.0 CSL",
+      "difficulty": "hard"
+    }
+  ]
+}
