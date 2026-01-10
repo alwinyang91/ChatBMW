@@ -61,7 +61,7 @@ python -m chatbmw.scraper -d -l 100 -o datasets/my_data
 | `--exact` | - | Use exact output path without date/count suffix |
 
 ### Option 3: Collect articles with GitHub Actions
-1. Fork the repository [alwin-yang/BMW-Articles](https://github.com/alwin-yang/BMW-Articles)
+1. Fork the repository [Alwin-Yang/BMW-Articles](https://github.com/Alwin-Yang/BMW-Articles)
 
 2. Configure your Hugging Face credentials as GitHub Actions secrets and variables in your forked repository.
 
