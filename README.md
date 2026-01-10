@@ -39,7 +39,7 @@ huggingface-cli download Alwin-Yang/bmw-articles --repo-type dataset --local-dir
 python -c "from datasets import load_dataset; load_dataset('Alwin-Yang/bmw-articles')"
 ```
 
-> **Visit the [BMW-News-Hub](https://alwinyang91.github.io/BMW-News-Hub) website to explore the articles dataset!**
+> **Visit the [BMW-News-Hub](https://alwin-yang.github.io/BMW-News-Hub) website to explore the articles dataset!**
 
 ### Option 2: Scrape from scratch
 ```bash
